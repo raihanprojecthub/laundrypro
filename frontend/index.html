@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LaundryPro</title>
+
+    <script>
+      window.watsonAssistantChatOptions = {
+        integrationID: '8473d6b8-a509-4455-93a0-290e95067ad6', // The ID of this integration.
+        region: 'us-south', // The region your integration is hosted in.
+        serviceInstanceID: 'e9c92c94-84a5-4304-96be-ca3fcbeff2a5', // The ID of your service instance.
+        onLoad: async (instance) => {
+          await instance.render();
+        },
+      };
+      setTimeout(function () {
+        const t = document.createElement('script');
+        t.src =
+          'https://web-chat.global.assistant.watson.appdomain.cloud/versions/' +
+          (window.watsonAssistantChatOptions.clientVersion || 'latest') +
+          '/WatsonAssistantChatEntry.js';
+        document.head.appendChild(t);
+      });
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.jsx"></script>
+  </body>
+</html>

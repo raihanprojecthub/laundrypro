@@ -1,0 +1,122 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  @apply scroll-smooth;
+}
+
+body {
+  font-family: 'Inter', sans-serif;
+}
+
+.navbar-fixed {
+  @apply fixed z-40 bg-white bg-opacity-30;
+  backdrop-filter: blur(4px);
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.2);
+}
+
+/* Active CSS Start */
+.active-admin {
+  @apply text-dark bg-gray-200 hover:bg-opacity-100 !important;
+}
+
+.active-admin img {
+  @apply text-dark brightness-0 hover:bg-opacity-100 !important;
+}
+
+.active-landing {
+  @apply md:text-sky-600 md:bg-transparent bg-primary text-white hover:bg-primary md:hover:bg-transparent !important;
+}
+
+.active-pelanggan {
+  @apply hover:text-sky-600 text-sky-600 !important;
+}
+
+.active-payment {
+  @apply bg-primary text-white;
+}
+/* Active CSS End */
+
+/* Table CSS Start */
+#table-layanan1 th, 
+#table-layanan1 td,
+#table-layanan2 th, 
+#table-layanan2 td {
+  padding: 5px 30px;
+  @apply border;
+}
+
+@media (min-width: 768px) {
+  #table-layanan1 th, 
+  #table-layanan1 td,
+  #table-layanan2 th, 
+  #table-layanan2 td {
+    padding: 10px 60px;
+  }
+}
+
+.table-detail td {
+  padding: 8px 20px 8px 20px;
+  @apply border;
+}
+
+.table-payment td {
+  @apply border-none;
+}
+
+@media (min-width: 768px) {
+  .table-detail th, .table-detail td {
+    padding: 16px 180px 16px 20px;
+  }
+}
+
+#table-riwayat1 th, td,
+#table-riwayat2 th, td,
+#table-order1 th, td,
+#table-order2 th, td, 
+#table-user th, td,
+#table-laporan th, td {
+  padding: 8px;
+  @apply border text-start;
+}
+
+#table-laporan th:nth-child(4),
+#table-laporan td:nth-child(4) {
+  width: 40%;
+}
+
+#table-user th:nth-child(3),
+#table-user td:nth-child(3) {
+  width: 50%;
+  word-break: break-all;
+}
+/* Table CSS End */
+
+/* Slick CSS Start */
+#slick-layanan .slick-prev,
+#slick-layanan .slick-next,
+#slick-testimoni .slick-prev,
+#slick-testimoni .slick-next, 
+#slick-hero .slick-prev,
+#slick-hero .slick-next, {
+  @apply hidden;
+}
+
+@media (min-width: 768px) {
+  #slick-layanan .slick-prev,
+  #slick-layanan .slick-next {
+    @apply bg-gray-500 rounded-full;
+  }
+}
+
+#slick-layanan .slick-slide > div,
+#slick-testimoni .slick-slide > div {
+  @apply mx-[16px];
+}
+
+.slick-list:focus
+{
+  @apply outline-none;
+}
+/* Slick CSS End */
